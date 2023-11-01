@@ -1,0 +1,281 @@
+#root {
+  inline-size: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+.mainBody {
+  margin-block-start: 0px;
+  background-color: rgb(255, 255, 255);
+  font-size: 30px;
+}
+
+.welcome {
+  margin-block-start: 0px;
+  z-index: 50;
+  background-color: rgb(255, 255, 255);
+  block-size: 100px;
+
+  inline-size: 100%;
+}
+
+.welcomeContent {
+  margin-top: 100px;
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+  inline-size: 100%;
+  block-size: 70%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.welcRectangle {
+  transition: 2s;
+  height: 100%;
+  width: 60%;
+  background-color: rgb(255, 255, 255);
+  overflow: hidden;
+  clip-path: polygon(100% 0%, 70% 100%, 0 100%, 0 0);
+  position: relative;
+}
+
+.welcRectangle h1 {
+  transition: 2s;
+  position: absolute;
+  font-size: 80px;
+  left: 5%;
+
+  width: 100%;
+  font-weight: bold;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(
+    to right,
+    #bf953f,
+    #fcf6ba,
+    #b38728,
+    #fbf5b7,
+    #aa771c
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #fff;
+  z-index: 5;
+}
+
+.welcRectangle p {
+  transition: 2s;
+  position: absolute;
+  font-size: 30px;
+  width: 80%;
+  margin-left: 20px;
+  color: rgb(0, 0, 0);
+  z-index: 5;
+  opacity: 0;
+}
+
+.welcRectangle img {
+  width: 100%; /* Ensure the image takes the full width of its container */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Ensure the image does not have extra space at the bottom */
+  position: absolute; /* Position the image within the div */
+  top: 20%; /* Move the image down by 50% of its parent container */
+  left: 50%; /* Move the image right by 50% of its parent container */
+  transform: translate(-50%, -20%);
+  z-index: 2;
+}
+
+.welcRectangle::before {
+  transition: 2s;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 5; /* Ensurrgba(0, 0, 0, 0.5)is above the image */
+}
+
+.welcRectangle:hover::before {
+  transition: 1s;
+  background-color: rgba(
+    255,
+    174,
+    0,
+    0.8
+  ); /* Change the background color on hover */
+}
+
+.welcRectangle:hover h1 {
+  transition: 0.2s;
+  opacity: 0; /* Hide the h1 on hover */
+}
+
+.welcRectangle:hover p {
+  transition: 0.2s;
+  opacity: 100; /* Hide the h1 on hover */
+}
+
+.welcRectangle:hover {
+  transition: 1s;
+  clip-path: polygon(80% 0%, 100% 100%, 0 100%, 0 0);
+}
+
+.welcBenefits {
+  position: relative;
+  height: 100%;
+  width: 50%;
+  background-color: #ffffff;
+}
+
+.welcBenefits h1 {
+  z-index: 5;
+  font-size: 50px;
+}
+
+.welcBenefits ul {
+  transform-origin: top left;
+  margin: 0; /* Reset default margin for the ul element */
+  padding: 0; /* Reset default padding for the ul element */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0;
+  padding: 0;
+  transform: skew(-20deg);
+  transition: transform 2s, filter 0.5s;
+  filter: blur(0);
+}
+
+.welcBenefits li {
+  transform-origin: top left;
+  margin-bottom: 20px;
+  transition: transform 2s;
+  transform: skew(20deg);
+}
+
+/* Apply styles to .welcBenefits when .welcRectangle is hovered */
+.welcRectangle:hover ~ .welcBenefits ul {
+  transition: transform 1s;
+
+  transform: skewY(20deg); /* Match the top left corner angle on hover */
+}
+
+.welcRectangle:hover ~ .welcBenefits li {
+  transform: skewY(-20deg); /* Match the top right corner angle on hover */
+}
+
+.techniqueCards {
+  block-size: 900px;
+  inline-size: 100%;
+  margin-block-start: 1000px;
+
+  background-color: aqua;
+}
+
+.card {
+  transition: all 2s;
+  filter: blur(10px);
+  transform: translateX(-100%);
+  opacity: 0;
+  block-size: 300px;
+  margin-block-start: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  inline-size: 80%;
+}
+
+.cardShow {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
+@media (prefers-reduced-motion) {
+  .card {
+    transition: none;
+  }
+}
+
+.cbLeft {
+  transition: 1.5s;
+  background-color: blueviolet;
+  inline-size: 60%;
+  block-size: 300px;
+  inset-inline-start: 80px;
+  justify-content: left;
+  position: absolute;
+}
+
+.cbRight {
+  transition: 1.5s;
+  position: absolute;
+  inset-inline-end: 0px;
+  background-color: brown;
+  block-size: 300px;
+  inline-size: 30%;
+}
+
+.akLeft {
+  transition: 2s;
+  position: absolute;
+  inset-inline-start: 15px;
+  inset-block-start: 40%;
+}
+
+.akRight {
+  position: absolute;
+  inset-inline-end: 15px;
+  inset-block-start: 40%;
+}
+.akLeft2 {
+  position: absolute;
+  inset-inline-start: 25px;
+  inset-block-start: 40%;
+}
+
+.akRight2 {
+  position: absolute;
+  inset-inline-end: 25px;
+  inset-block-start: 40%;
+}
+
+.arrow {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 10px;
+}
+
+.right {
+  -webkit-transform: rotate(-45deg);
+}
+
+.left {
+  -webkit-transform: rotate(135deg);
+}
+
+.information {
+  background-color: brown;
+
+  margin-block-start: 150%;
+}
+
+.cbinset-inline-start:hover {
+  transition: 0.5s;
+  box-shadow: 6px 12px 5px 2px blue;
+  box-shadow: 10px 10px 10px rgba(255, 217, 0);
+  transform: translate(-0.8rem, -1ex);
+}
+
+.cbinset-inline-end:hover {
+  transition: 0.5s;
+  box-shadow: 6px 12px 5px 2px blue;
+  transform: translate(30%, 50%, 50%);
+  box-shadow: 10px 10px 10px rgba(255, 217, 0);
+  transform: translate(-0.8rem, -1ex);
+}

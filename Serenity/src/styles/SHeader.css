@@ -1,0 +1,238 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner&family=Lobster&family=Roboto+Condensed&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Agbalumo&family=Edu+TAS+Beginner&family=Lobster&family=Roboto+Condensed&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Agbalumo&family=Parisienne&family=Roboto:ital,wght@0,100;1,100&display=swap");
+
+.headerImage {
+  position: absolute;
+  inset-block-start: 0px;
+  overflow: hidden;
+  block-size: 83%;
+}
+
+.headerImage::before {
+  content: "";
+  display: block;
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  inline-size: 100%;
+  block-size: 100%;
+  background: rgb(255, 250, 0);
+  background: linear-gradient(
+    360deg,
+    rgba(255, 250, 0, 0.4) 0%,
+    rgba(209, 20, 218, 0.5) 50%,
+    rgba(176, 43, 43, 1) 100%
+  );
+}
+
+.headerImage video {
+  display: block;
+  max-inline-size: 100%;
+  width: 100%;
+}
+
+.hImgtext {
+  font-family: "Edu TAS Beginner", cursive;
+  position: absolute;
+  inset-inline-start: 20%;
+  inset-block-start: 5%;
+  block-size: 200px;
+  justify-content: center;
+  text-align: center;
+  margin-block-end: 5px;
+  font-size: 70px;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  letter-spacing: 10px;
+  text-decoration: none;
+  border-radius: 50px;
+}
+
+.headerBody {
+  background-color: rgb(255, 0, 0);
+  inline-size: 100%;
+
+  position: sticky;
+  inset-block-start: 0;
+  block-size: 100px;
+  z-index: 100;
+}
+
+.headerContent {
+  position: relative;
+  margin-block-start: 41%;
+  block-size: 50px;
+  inset-inline-start: 0px;
+}
+
+.headerTop {
+  background-color: rgb(0, 0, 0);
+  block-size: 100px;
+}
+
+.headerTop h1 {
+  color: #ffffff;
+
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(
+    to right,
+    #bf953f,
+    #fcf6ba,
+    #b38728,
+    #fbf5b7,
+    #aa771c
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #fff;
+
+  position: relative;
+  text-transform: uppercase;
+
+  margin: 0;
+  font-weight: 500;
+
+  margin-inline-start: 140px;
+  font-size: 60px;
+  margin-block-start: 5px;
+  cursor: pointer;
+}
+
+.headerBottom {
+  background-color: rgb(255, 255, 255);
+  block-size: 100%;
+  inline-size: 100%;
+}
+
+.buttons {
+  z-index: 7;
+  text-align: center;
+  position: relative;
+  inset-block-end: 10px;
+}
+
+.navs {
+  margin-inline-start: 500px;
+  margin-block-start: 10px;
+}
+
+.buttons a {
+  transition: 2s;
+
+  font-family: "Agbalumo", cursive;
+  color: #000000;
+  display: inline-block;
+  text-align: center;
+  margin-inline-start: 40px;
+  font-size: 30px;
+  font-weight: bold;
+  border-radius: 25px;
+  padding: 5px;
+  text-decoration: none;
+}
+
+.headerWave {
+  position: absolute;
+  inset-block-start: 65px;
+  inset-inline-start: 0;
+  inline-size: 100%;
+  overflow: hidden;
+  line-height: 0;
+  z-index: 5;
+}
+
+.headerWave svg {
+  position: relative;
+  display: block;
+  inline-size: calc(125% + 1.3px);
+  block-size: 63px;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.headerWave .shape-fill {
+  overflow: hidden;
+
+  fill: rgb(255, 255, 255);
+}
+
+.headerWave2 {
+  position: absolute;
+  inset-block-start: 55px;
+  inset-inline-start: 0;
+  inline-size: 100%;
+  overflow: hidden;
+  line-height: 0;
+  z-index: 4;
+  overflow: hidden;
+}
+
+.headerWave2 svg {
+  position: relative;
+  display: block;
+  inline-size: calc(125% + 1.3px);
+  block-size: 63px;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.headerWave2 .shape-fill {
+  overflow: hidden;
+
+  fill: rgb(255, 187, 0);
+}
+
+.buttons a:hover {
+  backdrop-filter: blur(5px);
+  color: rgb(0, 0, 0);
+  transition: s;
+  background: linear-gradient(
+    to right,
+    #bf953f,
+    #fcf6ba,
+    #b38728,
+    #fbf5b7,
+    #aa771c
+  );
+
+  transform: translate(-0.3rem, -0.3ex);
+}
+
+.typewriter {
+  font-family: "Parisienne", sans-serif;
+  overflow: hidden;
+  border-inline-end: 4px solid #000000;
+  white-space: nowrap;
+  text-decoration: none;
+  letter-spacing: 0.15em;
+  animation: typing 5s steps(30, end), blink-caret 1.5s step-end infinite;
+}
+
+.typewriterBackground {
+  padding-inline-end: 20px;
+  padding-block-start: 5px;
+  padding-block-end: 5px;
+  padding-inline-start: 10px;
+}
+
+@keyframes typing {
+  from {
+    inline-size: 0;
+  }
+  to {
+    width: 70%; /* Adjust this value to control the space between typing and background end */
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #ffffff;
+  }
+}
