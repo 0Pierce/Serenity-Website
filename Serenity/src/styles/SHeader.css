@@ -1,14 +1,14 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@500&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner&family=Lobster&family=Roboto+Condensed&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Agbalumo&family=Edu+TAS+Beginner&family=Lobster&family=Roboto+Condensed&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Agbalumo&family=Parisienne&family=Roboto:ital,wght@0,100;1,100&display=swap");
 
 .headerImage {
   position: absolute;
   inset-block-start: 0px;
-  overflow: hidden;
-  block-size: 83%;
+
+  block-size: 100%;
+
+  height: 100%;
+  z-index: 0;
 }
 
 .headerImage::before {
@@ -19,19 +19,16 @@
   inset-inline-start: 0;
   inline-size: 100%;
   block-size: 100%;
-  background: rgb(255, 250, 0);
-  background: linear-gradient(
-    360deg,
-    rgba(255, 250, 0, 0.4) 0%,
-    rgba(209, 20, 218, 0.5) 50%,
-    rgba(176, 43, 43, 1) 100%
-  );
+  background: rgb(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  overflow: hidden;
 }
 
 .headerImage video {
-  display: block;
   max-inline-size: 100%;
+  z-index: 0;
   width: 100%;
+  overflow: hidden;
 }
 
 .hImgtext {
@@ -52,12 +49,12 @@
 }
 
 .headerBody {
-  background-color: rgb(255, 0, 0);
+  background-color: rgb(0, 0, 0, 0.6);
   inline-size: 100%;
-
+  backdrop-filter: blur(5px) contrast(30%);
   position: sticky;
   inset-block-start: 0;
-  block-size: 100px;
+  block-size: 140px;
   z-index: 100;
 }
 
@@ -68,12 +65,14 @@
   inset-inline-start: 0px;
 }
 
-.headerTop {
-  background-color: rgb(0, 0, 0);
-  block-size: 100px;
+.serLogo img {
+  width: 5%;
+  right: 5px;
+  margin-top: 4px;
+  position: absolute;
 }
 
-.headerTop h1 {
+.headerContent h1 {
   color: #ffffff;
 
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -87,24 +86,25 @@
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  color: #fff;
 
   position: relative;
   text-transform: uppercase;
 
-  margin: 0;
-  font-weight: 500;
+  font-weight: 200;
 
-  margin-inline-start: 140px;
-  font-size: 60px;
-  margin-block-start: 5px;
+  margin-inline-start: 10px;
+
+  font-size: 90px;
+  margin-top: 50px;
   cursor: pointer;
 }
 
 .headerBottom {
-  background-color: rgb(255, 255, 255);
+  position: absolute;
   block-size: 100%;
   inline-size: 100%;
+  top: 80%;
+  color: #ff0000;
 }
 
 .buttons {
@@ -115,90 +115,44 @@
 }
 
 .navs {
-  margin-inline-start: 500px;
-  margin-block-start: 10px;
+  margin-inline-start: 850px;
+  margin-block-start: 8px;
 }
 
 .buttons a {
-  transition: 2s;
-
-  font-family: "Agbalumo", cursive;
-  color: #000000;
+  transition: 3s;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #ffffff;
   display: inline-block;
   text-align: center;
   margin-inline-start: 40px;
-  font-size: 30px;
-  font-weight: bold;
-  border-radius: 25px;
-  padding: 5px;
+  font-size: 35px;
+
   text-decoration: none;
 }
 
-.headerWave {
-  position: absolute;
-  inset-block-start: 65px;
-  inset-inline-start: 0;
-  inline-size: 100%;
-  overflow: hidden;
-  line-height: 0;
-  z-index: 5;
-}
-
-.headerWave svg {
-  position: relative;
-  display: block;
-  inline-size: calc(125% + 1.3px);
-  block-size: 63px;
-  z-index: 0;
-  overflow: hidden;
-}
-
-.headerWave .shape-fill {
-  overflow: hidden;
-
-  fill: rgb(255, 255, 255);
-}
-
-.headerWave2 {
-  position: absolute;
-  inset-block-start: 55px;
-  inset-inline-start: 0;
-  inline-size: 100%;
-  overflow: hidden;
-  line-height: 0;
-  z-index: 4;
-  overflow: hidden;
-}
-
-.headerWave2 svg {
-  position: relative;
-  display: block;
-  inline-size: calc(125% + 1.3px);
-  block-size: 63px;
-  z-index: 0;
-  overflow: hidden;
-}
-
-.headerWave2 .shape-fill {
-  overflow: hidden;
-
-  fill: rgb(255, 187, 0);
-}
-
 .buttons a:hover {
-  backdrop-filter: blur(5px);
-  color: rgb(0, 0, 0);
-  transition: s;
-  background: linear-gradient(
-    to right,
-    #bf953f,
-    #fcf6ba,
-    #b38728,
-    #fbf5b7,
-    #aa771c
-  );
+  transition: 1s;
+  background: linear-gradient(to right, transparent, transparent),
+    linear-gradient(to right, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 100%;
+  animation-name: gradientAnimation;
+  animation-iteration-count: infinite;
+  animation-duration: 2s;
+  filter: drop-shadow(10px 8px 4px #fffb00);
+  transform: rotateX(-20deg) rotateY(5deg) rotateZ(10deg) translateY(-10px);
+}
 
-  transform: translate(-0.3rem, -0.3ex);
+@keyframes gradientAnimation {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
 }
 
 .typewriter {

@@ -8,36 +8,46 @@ body {
 
 .mainBody {
   margin-block-start: 0px;
-  background-color: rgb(255, 255, 255);
+
   font-size: 30px;
+  z-index: 25;
 }
 
 .welcome {
   margin-block-start: 0px;
   z-index: 50;
-  background-color: rgb(255, 255, 255);
-  block-size: 100px;
 
+  block-size: 900px;
+  z-index: 5;
   inline-size: 100%;
+}
+
+.welcomeCover {
+  background-color: rgb(255, 255, 255);
+  height: 500px;
+  width: 100%;
+
+  position: absolute;
+  z-index: 1;
 }
 
 .welcomeContent {
   margin-top: 100px;
   position: absolute;
-  background-color: rgb(255, 255, 255);
+  background-color: #a27969;
   inline-size: 100%;
   block-size: 70%;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+  z-index: 5;
 }
 
 .welcRectangle {
   transition: 2s;
   height: 100%;
   width: 60%;
-  background-color: rgb(255, 255, 255);
-  overflow: hidden;
+
   clip-path: polygon(100% 0%, 70% 100%, 0 100%, 0 0);
   position: relative;
 }
@@ -47,9 +57,9 @@ body {
   position: absolute;
   font-size: 80px;
   left: 5%;
-
+  font-weight: 400;
   width: 100%;
-  font-weight: bold;
+
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background: linear-gradient(
     to right,
@@ -101,11 +111,11 @@ body {
 
 .welcRectangle:hover::before {
   transition: 1s;
-  background-color: rgba(
-    255,
-    174,
-    0,
-    0.8
+  background-color: rgb(
+    245,
+    211,
+    176,
+    0.9
   ); /* Change the background color on hover */
 }
 
@@ -128,33 +138,80 @@ body {
   position: relative;
   height: 100%;
   width: 50%;
-  background-color: #ffffff;
 }
 
-.welcBenefits h1 {
+.topBen {
+  margin-top: 10px;
+  height: 80px;
+  background-color: #000000;
+  width: 50%;
+  margin-left: 25%;
+  border-radius: 20px;
+}
+
+.topBen h1 {
+  top: -20px;
   z-index: 5;
   font-size: 50px;
+  position: absolute;
+  left: 40%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(
+    to right,
+    #bf953f,
+    #fcf6ba,
+    #b38728,
+    #fbf5b7,
+    #aa771c
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #fff;
+  font-weight: 200;
 }
 
 .welcBenefits ul {
+  transition: 2s;
   transform-origin: top left;
-  margin: 0; /* Reset default margin for the ul element */
-  padding: 0; /* Reset default padding for the ul element */
+
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin: 0;
-  padding: 0;
-  transform: skew(-20deg);
+  margin-top: 30px;
+  transform: skew(-25deg);
   transition: transform 2s, filter 0.5s;
   filter: blur(0);
+  list-style-type: none;
+  line-height: 60px;
 }
 
 .welcBenefits li {
+  transition: 2s;
   transform-origin: top left;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
+
   transition: transform 2s;
   transform: skew(20deg);
+}
+
+.star {
+  filter: brightness(1);
+  transition: filter 2s; /* Define transition for the 'filter' property */
+  transition: 2s;
+  background-image: url("src/assets/images/goldStar.png");
+  height: 50px;
+  margin-top: 0px;
+  padding-left: 80px;
+  display: inline-block;
+  vertical-align: middle;
+  background-size: contain;
+  background-repeat: no-repeat;
+  vertical-align: middle; /* Ensure proper alignment with the text */
+}
+
+.star:hover {
+  transition: 1s;
+  filter: brightness(1.2); /* Change brightness on hover */
 }
 
 /* Apply styles to .welcBenefits when .welcRectangle is hovered */
@@ -168,114 +225,98 @@ body {
   transform: skewY(-20deg); /* Match the top right corner angle on hover */
 }
 
-.techniqueCards {
-  block-size: 900px;
-  inline-size: 100%;
-  margin-block-start: 1000px;
+.mainCard {
+  position: relative;
+  height: 500px;
 
-  background-color: aqua;
-}
-
-.card {
-  transition: all 2s;
-  filter: blur(10px);
-  transform: translateX(-100%);
-  opacity: 0;
-  block-size: 300px;
-  margin-block-start: 60px;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  inline-size: 80%;
+  width: 800px;
+  margin-top: 100px;
+  margin: auto;
 }
 
-.cardShow {
+.mcardLeft {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: #8c00ff;
+  z-index: 2;
+  transition: opacity 0.5s;
+}
+
+.mcardLeft h1 {
+  position: absolute;
+  left: 15px;
+  top: 5px;
+  margin: 0;
+}
+
+.mcardLHover {
+  transition: 1s;
+  width: 35%;
+  height: 35%;
+}
+
+.mcardLContent p {
+  margin-left: 25%;
+  width: 60%;
+}
+
+.mcardRight {
+  transition: background-color 1s, clip-path 1s;
+  z-index: 2;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: #dbce19;
+  bottom: 0px;
+  clip-path: polygon(83% 85%, 91% 78%, 100% 70%, 100% 100%, 68% 100%, 75% 93%);
+  z-index: 5;
+}
+
+.mcardRight h1 {
+  position: absolute;
+  right: 15px;
+  bottom: 5px;
+  margin: 0;
+  cursor: pointer;
+}
+
+.mcardRight p {
+  margin-left: 25%;
+  width: 60%;
+}
+
+.mcardRighthover {
+  position: absolute;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+
+  clip-path: polygon(35% 0, 60% 0, 100% 0, 100% 100%, 0 100%, 0 28%);
+  z-index: 7;
+}
+
+.mcardRight h1:hover {
+  transition: 1s;
+  background-color: #00d9ff;
+  box-shadow: 520px 220px 100px 20px rgb(255, 0, 0);
+}
+
+.mcardLContent {
   opacity: 1;
-  filter: blur(0);
-  transform: translateX(0);
 }
 
-@media (prefers-reduced-motion) {
-  .card {
-    transition: none;
-  }
+.mcardContentHide {
+  opacity: 0;
 }
 
-.cbLeft {
-  transition: 1.5s;
-  background-color: blueviolet;
-  inline-size: 60%;
-  block-size: 300px;
-  inset-inline-start: 80px;
-  justify-content: left;
-  position: absolute;
+.mcardRContent {
+  opacity: 1;
 }
 
-.cbRight {
-  transition: 1.5s;
-  position: absolute;
-  inset-inline-end: 0px;
-  background-color: brown;
-  block-size: 300px;
-  inline-size: 30%;
-}
-
-.akLeft {
-  transition: 2s;
-  position: absolute;
-  inset-inline-start: 15px;
-  inset-block-start: 40%;
-}
-
-.akRight {
-  position: absolute;
-  inset-inline-end: 15px;
-  inset-block-start: 40%;
-}
-.akLeft2 {
-  position: absolute;
-  inset-inline-start: 25px;
-  inset-block-start: 40%;
-}
-
-.akRight2 {
-  position: absolute;
-  inset-inline-end: 25px;
-  inset-block-start: 40%;
-}
-
-.arrow {
-  border: solid black;
-  border-width: 0 3px 3px 0;
-  display: inline-block;
-  padding: 10px;
-}
-
-.right {
-  -webkit-transform: rotate(-45deg);
-}
-
-.left {
-  -webkit-transform: rotate(135deg);
-}
-
-.information {
-  background-color: brown;
-
-  margin-block-start: 150%;
-}
-
-.cbinset-inline-start:hover {
-  transition: 0.5s;
-  box-shadow: 6px 12px 5px 2px blue;
-  box-shadow: 10px 10px 10px rgba(255, 217, 0);
-  transform: translate(-0.8rem, -1ex);
-}
-
-.cbinset-inline-end:hover {
-  transition: 0.5s;
-  box-shadow: 6px 12px 5px 2px blue;
-  transform: translate(30%, 50%, 50%);
-  box-shadow: 10px 10px 10px rgba(255, 217, 0);
-  transform: translate(-0.8rem, -1ex);
+.footer {
+  background-color: #000000;
+  height: 300px;
+  margin-top: 200px;
 }
