@@ -4,6 +4,18 @@
 
 body {
   margin: 0;
+
+  background: #dbe6f6; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to bottom,
+    #c5796d,
+    #dbe6f6
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to top,
+    #c5796d,
+    #dbe6f6
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .mainBody {
@@ -23,8 +35,8 @@ body {
 }
 
 .welcomeCover {
-  background-color: rgb(255, 255, 255);
-  height: 500px;
+  background-image: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);
+  height: 1000px;
   width: 100%;
 
   position: absolute;
@@ -34,7 +46,6 @@ body {
 .welcomeContent {
   margin-top: 100px;
   position: absolute;
-  background-color: #a27969;
   inline-size: 100%;
   block-size: 70%;
   display: flex;
@@ -62,7 +73,7 @@ body {
 
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background: linear-gradient(
-    to right,
+    to bottom,
     #bf953f,
     #fcf6ba,
     #b38728,
@@ -144,8 +155,8 @@ body {
   margin-top: 10px;
   height: 80px;
   background-color: #000000;
-  width: 50%;
-  margin-left: 25%;
+  width: 100%;
+  margin-left: 0%;
   border-radius: 20px;
 }
 
@@ -199,7 +210,7 @@ body {
   transition: filter 2s; /* Define transition for the 'filter' property */
   transition: 2s;
   background-image: url("src/assets/images/goldStar.png");
-  height: 50px;
+  height: 60px;
   margin-top: 0px;
   padding-left: 80px;
   display: inline-block;
@@ -225,21 +236,59 @@ body {
   transform: skewY(-20deg); /* Match the top right corner angle on hover */
 }
 
-.mainCard {
+.sectionSpacer1 {
+  aspect-ratio: 960/30;
+
+  position: relative;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.s1svg {
+  margin-top: 0px;
+  height: 200px;
+  background-image: url("src/assets/svgs/test1.svg");
+}
+
+.cardTitle {
+  position: relative;
+  margin-top: 200px;
+}
+
+.cardTitle h1 {
+  text-align: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto;
+}
+
+.csrBackground {
+  margin-left: 900px;
+  background-color: #000000;
+}
+
+.mainCards {
   position: relative;
   height: 500px;
 
   display: flex;
   width: 800px;
   margin-top: 100px;
-  margin: auto;
+}
+
+.cardSR {
+}
+
+.cardHR {
+  margin-left: 100px;
 }
 
 .mcardLeft {
+  border-radius: 20px;
   position: absolute;
   height: 100%;
   width: 100%;
-  background-color: #8c00ff;
+  background-color: #f1c28c;
   z-index: 2;
   transition: opacity 0.5s;
 }
@@ -249,12 +298,26 @@ body {
   left: 15px;
   top: 5px;
   margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto;
+  background: linear-gradient(
+    to right,
+    #bf953f,
+    #fcf6ba,
+    #b38728,
+    #fbf5b7,
+    #aa771c
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #fff;
+  z-index: 3;
 }
-
-.mcardLHover {
-  transition: 1s;
-  width: 35%;
-  height: 35%;
+.hrBackground {
+  position: absolute;
+  width: 120px;
+  height: 100px;
+  background-color: #000000;
+  border-radius: 20px;
 }
 
 .mcardLContent p {
@@ -268,10 +331,28 @@ body {
   position: absolute;
   height: 100%;
   width: 100%;
-  background-color: #dbce19;
+  background-color: #e69655;
   bottom: 0px;
   clip-path: polygon(83% 85%, 91% 78%, 100% 70%, 100% 100%, 68% 100%, 75% 93%);
-  z-index: 5;
+  z-index: 7;
+}
+
+.mcardRContent img {
+  width: 100%;
+}
+
+.mcardRContent {
+  transition: 1s;
+  position: relative;
+  opacity: 1;
+  width: 50%;
+  z-index: 1;
+}
+
+.mcardRContentSHOW {
+  transition: 0.5s;
+  opacity: 1;
+  width: 100%;
 }
 
 .mcardRight h1 {
@@ -280,6 +361,7 @@ body {
   bottom: 5px;
   margin: 0;
   cursor: pointer;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto;
 }
 
 .mcardRight p {
@@ -294,7 +376,7 @@ body {
   width: 100%;
 
   clip-path: polygon(35% 0, 60% 0, 100% 0, 100% 100%, 0 100%, 0 28%);
-  z-index: 7;
+  z-index: 5;
 }
 
 .mcardRight h1:hover {
@@ -303,16 +385,242 @@ body {
   box-shadow: 520px 220px 100px 20px rgb(255, 0, 0);
 }
 
-.mcardLContent {
-  opacity: 1;
+.mcardLeftSR {
+  border-radius: 20px;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: #f1c28c;
+  z-index: 2;
+  transition: opacity 0.5s;
 }
 
-.mcardContentHide {
-  opacity: 0;
+.mcardLeftSR h1 {
+  position: absolute;
+  left: 15px;
+  top: 5px;
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto;
+  background: linear-gradient(
+    to right,
+    #bf953f,
+    #fcf6ba,
+    #b38728,
+    #fbf5b7,
+    #aa771c
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.mcardRContent {
+.srBackground {
+  position: absolute;
+  width: 110px;
+  height: 100px;
+  background-color: #000000;
+  border-radius: 20px;
+}
+
+.mcardLContentSR p {
+  margin-left: 25%;
+  width: 60%;
+}
+
+.mcardRightSR {
+  transition: background-color 1s, clip-path 1s;
+  z-index: 2;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: #e69655;
+  bottom: 0px;
+  clip-path: polygon(83% 85%, 91% 78%, 100% 70%, 100% 100%, 68% 100%, 75% 93%);
+  z-index: 7;
+}
+
+.mcardRContentSR img {
+  width: 100%;
+}
+
+.mcardRContentSR {
+  transition: 1s;
+  position: relative;
   opacity: 1;
+  width: 50%;
+  z-index: 1;
+}
+
+.mcardRContentSHOW {
+  transition: 0.5s;
+  opacity: 1;
+  width: 100%;
+}
+
+.mcardRightSR h1 {
+  position: absolute;
+  right: 15px;
+  bottom: 5px;
+  margin: 0;
+  cursor: pointer;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto;
+}
+
+.mcardRightSR p {
+  margin-left: 25%;
+  width: 60%;
+}
+
+.mcardRighthoverSR {
+  position: absolute;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+
+  clip-path: polygon(35% 0, 60% 0, 100% 0, 100% 100%, 0 100%, 0 28%);
+  z-index: 5;
+}
+
+.mcLHR {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+  color: #000000;
+}
+
+.mcLSR {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+  color: #000000;
+}
+
+.mcLSRback {
+  padding: 5px;
+  border-radius: 10px;
+  font-size: 40px;
+  margin-right: 10px;
+}
+
+.mcLHRback {
+  padding: 5px;
+  border-radius: 10px;
+  font-size: 40px;
+  margin-right: 10px;
+}
+
+.sectionSpacer2 {
+  aspect-ratio: 960/300;
+
+  position: relative;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.s2svg {
+  margin-top: 0px;
+  height: 300px;
+  background-image: url("src/assets/svgs/spacer2.svg");
+  margin-bottom: -40px;
+}
+
+.endingInfo {
+  position: relative;
+  margin-top: 40px;
+  background-image: linear-gradient(
+    to bottom,
+    #b8817e,
+    #daa4af,
+    #e3afc9,
+    #e6bde4,
+    #e1cdff
+  );
+  height: 800px;
+}
+
+.endingInfo h1 {
+  font-weight: bold;
+  position: absolute;
+  text-align: center;
+  left: 30px;
+  top: 0px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto;
+  color: rgb(255, 255, 255);
+}
+
+.elContainer {
+  position: relative;
+}
+
+.eInfo {
+  position: absolute;
+  right: 0px;
+  width: 30%;
+  margin-right: 10px;
+}
+
+.PhotoBlock {
+  position: absolute;
+  display: flex;
+  top: 120px;
+  left: 0px;
+  margin: auto;
+  overflow: hidden;
+  width: 60%;
+  height: 600px;
+
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.leftPhoto {
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 10px;
+  height: 100%;
+  background-color: #4255b3;
+  width: 100%;
+  margin-right: 20px;
+  overflow: hidden;
+}
+
+.leftPhoto img {
+  height: 100%;
+}
+
+.RightPhotos {
+  height: 90%;
+
+  width: 500px;
+  padding: 10px;
+}
+
+.topPhoto {
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 10px;
+  overflow: hidden;
+  height: 50%;
+  width: 100%;
+  background-color: #1100ff;
+
+  margin-bottom: 20px;
+}
+
+.topPhoto img {
+  height: 100%;
+  width: 100%;
+}
+
+.bottomPhoto {
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 10px;
+  overflow: hidden;
+  height: 50%;
+  width: 100%;
+  background-color: #c5796d;
+}
+
+.bottomPhoto img {
+  height: 100%;
+  width: 100%;
 }
 
 .footer {

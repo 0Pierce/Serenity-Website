@@ -6,11 +6,36 @@ import '/src/styles/SHeader.css'
 
 function Header(){
 
+
+
+
+
+
+
+  
+
     const texts = ['effect..', 'benefit..', 'change..', 'beauty..'];
 
     const [currentWordIndex, setCurrentWordIndex] = useState(0);
     const [currentWord, setCurrentWord] = useState(texts[0]);
     const [currentLetterIndex, setCurrentLetterIndex] = useState(0);
+    const [isSticky, setIsSticky] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 850) {
+        setIsSticky(true);
+      } else {
+        setIsSticky(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
   
     useEffect(() => {
       const interval = setInterval(() => {
@@ -36,6 +61,10 @@ function Header(){
     }, [currentWordIndex]);
   
 
+
+      
+
+
     return(
       <Fragment>
         
@@ -52,7 +81,7 @@ function Header(){
       
        </div>
            
-        <div className="headerBody">
+        <div className={`headerBody ${isSticky ? 'stickyHeader' : ''}`}>
             
 
             
@@ -70,10 +99,11 @@ function Header(){
                 <div className="buttons"> 
                   <div className="navs">
                     <a href="/">Home</a>
+                    <a href="/">Contact</a>
                     <a href="/">Treatments</a>
                     <a href="/">Prices</a>
                     <a href="/">About us</a>
-                    <a href="/">Equipment</a>
+                    
                   </div>
               
 

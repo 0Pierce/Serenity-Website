@@ -30,18 +30,44 @@ function App() {
       if(e.target.classList.contains('mcardRight')){
         console.log("Entered Right")
         e.target.classList.add('mcardRighthover');
-        document.querySelector('.mcardLContent').classList.add('mcardContentHide');
-        document.querySelector('.mcardLeft').classList.add('mcardLHover');
-        document.querySelector('.mcardRContent').classList.remove('mcardContentHide');
+        
+        document.querySelector('.mcardRContent').classList.add('mcardRContentSHOW');
+       
+       
       }
 
       if(e.target.classList.contains('mcardLeft')){
         console.log("Entered Left")
         
         document.querySelector('.mcardRight').classList.remove('mcardRighthover');
-        document.querySelector('.mcardLContent').classList.remove('mcardContentHide');
-        document.querySelector('.mcardLeft').classList.remove('mcardLHover');
-        document.querySelector('.mcardRContent').classList.add('mcardContentHide');
+        document.querySelector('.mcardRContent').classList.remove('mcardRContentSHOW');
+        
+      }
+
+      
+
+
+
+
+
+
+
+
+      if(e.target.classList.contains('mcardRightSR')){
+        console.log("Entered Right")
+        e.target.classList.add('mcardRighthoverSR');
+        
+        document.querySelector('.mcardRContentSR').classList.add('mcardRContentSHOW');
+       
+       
+      }
+
+      if(e.target.classList.contains('mcardLeftSR')){
+        console.log("Entered Left")
+        
+        document.querySelector('.mcardRightSR').classList.remove('mcardRighthoverSR');
+        document.querySelector('.mcardRContentSR').classList.remove('mcardRContentSHOW');
+        
       }
      
         
@@ -94,30 +120,46 @@ types I to V.
           <div className="topBen"><h1>Benefits</h1></div>
           
           <ul>
-            <li className='star'>Skin</li>
-            <li className='star'>Skin</li>
-            <li className='star'>Skin</li>
-            <li className='star'>Skin</li>
-            <li className='star'>Skin</li>
-            <li className='star'>Skin</li>
-            <li className='star'>Skin</li>
-            <li className='star'>Skin</li>
+            <li className='star'>You can get stunning, age-defying results with little to no downtime.</li>
+            <li className='star'>Cosmetic laser facial treatments restore a naturally youthful look to your face.</li>
+            <li className='star'>Machines are far more accurate than humans.</li>
+            <li className='star'>Cosmetic laser treatments can now treat issues that were considered untreatable.</li>
+            <li className='star'>Laser treatments can remove unwanted hair in places all over the body.</li>
+            <li className='star'>Cosmetic laser treatments can give you a chance to be a whole new you</li>
+            
           </ul>
         </div>
         
-     
+        
          
      
 
      </div>
+
+    
+     
     </div>
-    <div className="mainCardUnder"></div>
-    <div className="mainCard">
+
+    
+    
+    
+    <div className="sectionSpacer1 s1svg"></div>
+    
+    <div className="cardTitle">
+    
+      <h1>Services</h1>
+    </div>
+    <div className="mainCards">
+      
+      <div className="chrBackground">
+      <div className="cardHR">
+
+
       <div className="mcardLeft" onMouseEnter={switchCard} onClick={switchCard}>
-      <h1 onClick={switchCard} onMouseEnter={switchCard} >HR</h1>
+      <div className="hrBackground"><h1 >HR</h1></div>
         <div className="mcardLContent" >
         
-        <p>GGTAGAGAGAGAGGAGAGGAAGAr sit amet consectetur adipisicing elit. Neque unde, accusantium ipsa eius consectetur magnam quas harum eveniet! Necessitatibus quia eaque perspiciatis ipsum eligendi iure veniam a velit modi temporibus?
+        <p><span className='mcLHRback'><span className='mcLHR'>Hair Removal</span> </span> sit amet consectetur adipisicing elit. Neque unde, accusantium ipsa eius consectetur magnam quas harum eveniet! Necessitatibus quia eaque perspiciatis ipsum eligendi iure veniam a velit modi temporibus?
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere architecto tempora reiciendis cupiditate tenetur qui cumque recusandae modi labore dolore quis culpa hic exercitationem, at delectus aperiam sit aut! Animi?
         </p>
         </div>
@@ -125,16 +167,77 @@ types I to V.
       </div>
       <div
         className="mcardRight" onMouseEnter={switchCard} onClick={switchCard}>
-        <h1 onClick={switchCard} onMouseEnter={switchCard}>SR</h1>
-        <div className="mcardRContent">
-          <p>BABABABABBABABABA consectetur adipisicing elit. Sequi esse repellendus voluptates, iure quia quas reprehenderit totam dolores! Placeat assumenda eum beatae quaerat consectetur optio dignissimos hic repellat aliquid quos!.
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit minima, impedit repellendus quam ipsa iusto, eius odio exercitationem magnam in similique inventore porro a ullam est et cupiditate. Voluptatum, praesentium.
-        
-          </p>
+        <h1>View</h1>
+        <div className="mcardRContent" >
+        <img src="src/assets/images/HR1.jpg" alt=""/>
         </div>
       </div>
+
+      
+
+
+
+      </div>
+    </div>
+      <div className="csrBackground">
+      <div className="cardSR">
+
+
+      <div className="mcardLeftSR" onMouseEnter={switchCard} onClick={switchCard}>
+      <div className="srBackground"><h1>SR</h1></div>
+        <div className="mcardLContentSR" >
+        
+        <p><span className='mcLSRback'><span className='mcLSR'>Skin Rejuvenation</span></span> sit amet consectetur adipisicing elit. Neque unde, accusantium ipsa eius consectetur magnam quas harum eveniet! Necessitatibus quia eaque perspiciatis ipsum eligendi iure veniam a velit modi temporibus?
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere architecto tempora reiciendis cupiditate tenetur qui cumque recusandae modi labore dolore quis culpa hic exercitationem, at delectus aperiam sit aut! Animi?
+        </p>
+        </div>
+        
+      </div>
+      <div
+        className="mcardRightSR" onMouseEnter={switchCard} onClick={switchCard}>
+        <h1 onClick={switchCard} onMouseEnter={switchCard}>View</h1>
+        <div className="mcardRContentSR" onMouseEnter={switchCard}>
+        <img src="src/assets/images/SR2.jpg" alt="" onMouseEnter={switchCard} />
+        </div>
+      </div>
+
+      
+
+
+
+      </div>
+    </div>
+
+
+  
+
     </div>
  
+    <div className="sectionSpacer2 s2svg"></div>
+    <div className="endingInfo">
+      <h1>See the difference</h1>
+      <div className="elContainer">
+        <div className="eInfo">
+          
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam inventore et sint mollitia ducimus ut cum optio eos iusto qui quaerat quisquam a illum quasi saepe perspiciatis cumque, nulla ullam?</p>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non delectus vero doloremque magnam distinctio! Odit voluptatem ab aspernatur impedit dolorum, eveniet quos harum nam natus illum obcaecati quae. Molestias, dolor!</p>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi cumque aliquam rerum perspiciatis neque accusantium nulla explicabo, perferendis obcaecati qui voluptatibus odit voluptates quam alias cum laudantium sed accusamus repellat?</p>
+        </div>
+          <div className="PhotoBlock">
+            <div className="leftPhoto">
+            <img src="src/assets/images/HR1.jpg" alt=""/>
+            </div>
+        <div className="RightPhotos">
+          <div className="topPhoto">
+          <img src="src/assets/images/HR1.jpg" alt=""/>
+          </div>
+          <div className="bottomPhoto">
+          <img src="src/assets/images/HR1.jpg" alt=""/>
+          </div>
+        </div>
+       </div>
+      </div>
+    </div>
     <div className="footer"></div>
 
     </div>
