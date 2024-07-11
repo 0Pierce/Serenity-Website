@@ -1,8 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import Homepage from '/src/pages/Homepage.jsx'
-import Contact from '/src/pages/Contact.jsx'
-import About from '/src/pages/About.jsx'
+import Contact from '/src/pages/ContactPage.jsx'
+import About from '/src/pages/AboutPage.jsx'
 import './index.css'
 
 
