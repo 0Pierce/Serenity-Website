@@ -1,16 +1,9 @@
 import React,{useState, useEffect} from 'react'
 import "/src/styles/Landing.css"
-import { handle } from 'express/lib/application';
+import BeautyIcon from '/src/assets/svgs/beauty.svg'
+import Star from '/src/assets/svgs/starShiny.svg'
 
 
-// // var images = [
-// //   '/src/assets/images/img1.jpg',
-// //   '/src/assets/images/img2.jpg',
-// //   '/src/assets/images/img3.jpg',
-// //   '/src/assets/images/img4.jpg',
-// //   '/src/assets/images/img5.jpg'
-  
-// // ];
 
 
 
@@ -18,13 +11,24 @@ import { handle } from 'express/lib/application';
 export default function Landing() {
 
 
-  // const texts = ['effect..', 'benefit..', 'change..', 'beauty..'];
+  const texts = ['effect..', 'benefit..', 'change..', 'beauty..'];
 
-  // const [currentWordIndex, setCurrentWordIndex] = useState(0);
-  // const [currentWord, setCurrentWord] = useState(texts[0]);
+  const [wordIndex, setWordIndex] = useState(0)
+  const [currentWord, setCurrentWord] = useState(texts[0]);
+ 
   
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setWordIndex(prevIndex => (prevIndex + 1) % texts.length);
+    }, 4000); 
 
+    return () => clearInterval(interval); 
+  }, [texts.length]);
+
+  useEffect(() => {
+    setCurrentWord(texts[wordIndex]);
+  }, [wordIndex, texts]);
  
 
 
@@ -40,7 +44,18 @@ export default function Landing() {
         </div>
         <div className="landingCard">
           <div className="landingRight">
-            <h1>Experience the</h1>
+            
+            <h1>Experience the &nbsp;<span className='curWord'>{currentWord}</span></h1>
+            <img src={Star}/>
+            <h3>Of</h3>
+            <div className="lrTop">
+            <h2>Laser</h2>
+            </div>
+            <div className="lrBott">
+            <h2>Technology</h2>
+            </div>
+            
+            
             
           </div>
         </div>

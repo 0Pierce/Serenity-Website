@@ -1,7 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    
+  }
+
 .headerBody{
     position: sticky;
     top: 0px;
     width: 100%;
-    height: 10vh;
-    background-color: blue;
+    height: 5vh;
+    background-color: rgb(255, 255, 255);
+    margin: 0px;
+    z-index: 100;
+    
+    
 }
+
+.headerBody ul{
+    position: absolute;
+    display: flex;
+    right: 50px;
+    top: 10%;
+    list-style: none;
+    
+
+}
+
+.headerBody li{
+    margin-left: 50px;
+    list-style: none;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.headerBody a{
+    color: black;
+    font-style: none;
+    list-style: none;
+    text-decoration: none;
+    color: #1c274c;
+
+}
+

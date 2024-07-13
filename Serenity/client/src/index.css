@@ -1,9 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
   margin: 0px;
-
+  padding: 0px;
+  
 
 
   font-synthesis: none;

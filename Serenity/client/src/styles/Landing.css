@@ -1,37 +1,143 @@
+*{
+    margin: 0px;
+}
+
 .landingBody{
     position: relative;
     margin: 0px;
     width: 100%;
-    height: 90vh;
+    height: 95vh;
     background-color: rgba(0, 255, 255, 0);
     display: flex;
+    overflow: hidden;
 }
 
 
 .landingCard{
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(0, 255, 106, 0);
     width: 50%;
     height: 100%;
     position: relative;
-    display: inline-block
+    display: inline-block;
+    overflow: hidden;
 }
 
 
 .landingLeft{
-    background-color: azure;
+    background-color: rgba(255, 255, 255, 0.986);
     width: 100%;
     height: 100%;
     clip-path: polygon(100% 0%, 70% 100%, 0 100%, 0 0);
     position: relative;
     overflow: hidden;
+    z-index: 6;
     
 }
+
 
 .landingLeft video{
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensure the video covers the entire container */
+    object-fit: cover; 
     position: absolute;
     top: 0;
     left: 0;
+    
 }
+
+
+.landingRight {
+    position: relative;
+    margin: 0px;
+    background-color: rgba(137, 43, 226, 0);
+    width: 100%;
+    height: 100%;
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    z-index: 5;
+    overflow: hidden;
+    color: #1c274c;
+    
+    
+    
+}
+
+.landingRight h1 {
+    margin: 0px;
+    position: relative;
+    top: 10%;
+    font-size: 3vw;
+    justify-content: center;
+    display: flex;
+    transition: 1.5s;
+}
+
+.landingRight h3{
+    margin: 0px;
+    position: relative;
+    transition: 1.5s;
+    margin: 5px;
+    top: 15vh;
+    font-size: 5vh;
+}
+
+.landingRight img{
+    width: 10vw;
+    margin: 0px;
+    position: relative;
+    top: 19vh;
+    left: 35vw;
+    overflow: hidden;
+    
+    
+}
+
+
+.landingRight h2{
+    margin: 5px;
+    position: relative;
+    
+    display: flex;
+    font-size: clamp(4.5rem, 8vw,900%);
+    transition: 1.5s;
+    font-weight: 800;
+    
+}
+
+.curWord{
+    color: black;
+    text-decoration:underline;
+    transition: opacity 1s ease-in-out;
+    opacity: 1;
+    
+}
+
+
+
+
+.lrTop {
+    position: relative;
+    top: 10vh;
+    margin: 0px;
+    margin-bottom: 40px;
+    
+}
+
+.lrBott {
+    position: relative;
+    top: 0vh;
+    margin: 0px;
+    margin-top: 50px;
+    
+    
+
+}
+
+
+/* @media (max-width: 1400px) {
+    .landingRight h2{
+        transition: 1s;
+
+        font-size: 100px;
+    }
+} */

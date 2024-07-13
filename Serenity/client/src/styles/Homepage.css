@@ -1,12 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+
+
 .homepageBody{
 
     width: 100%;
     height: 100vh;
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.952);
     display: inline-block;
     position: relative;
+    margin: 0px;
 }
 
 
-
-
+.homepageBody h1{
+    margin: 0px;
+}
