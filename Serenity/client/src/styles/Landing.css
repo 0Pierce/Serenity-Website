@@ -45,6 +45,12 @@
     
 }
 
+.landigLeft video:hover {
+    width: 50%;
+    height: 50%;
+    top: -20px;
+}
+
 
 .landingRight {
     position: relative;
@@ -93,6 +99,8 @@
 }
 
 
+
+
 .landingRight h2{
     margin: 5px;
     position: relative;
@@ -104,12 +112,38 @@
     
 }
 
+
+
 .curWord{
-    color: black;
-    text-decoration:underline;
-    transition: opacity 1s ease-in-out;
-    opacity: 1;
+    color: #FFD700;
+    /* text-decoration:underline; */
+   text-decoration-color: #1c274c;
+   text-decoration-style:solid;
+   text-decoration-thickness: 3px;
+   text-decoration-skip: auto;
+
+    background: linear-gradient(to right, transparent, transparent),
+      linear-gradient(to right, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+    animation-name: gradientAnimation;
+    animation-iteration-count: infinite;
+    animation-duration: 4s;
+
     
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: left;
+       
+    }
+ 
+    100% {
+        background-position: right;
+       
+    }
 }
 
 

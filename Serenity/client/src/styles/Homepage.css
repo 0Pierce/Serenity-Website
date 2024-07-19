@@ -1,21 +1,146 @@
 * {
     margin: 0;
     padding: 0;
-  }
+}
 
-
-
-.homepageBody{
-
-    width: 100%;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.952);
-    display: inline-block;
+.homepageBody {
     position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 0, 0);
+    display: inline-block;
     margin: 0px;
 }
 
-
-.homepageBody h1{
+.hpFirstPage {
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 100vh;
     margin: 0px;
+}
+
+.hp1Title {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(106, 153, 153, 0);
+    margin: 0px;
+}
+
+.hpFirstPage h2 {
+    position: relative;
+    color: rgb(0, 0, 0);
+    font-size: 3vw;
+    margin: 0px;
+    margin-top: 40px;
+}
+
+.hp1CardContainer {
+    position: relative;
+    width: 100%;
+    background-color: rgba(0, 255, 255, 0);
+    display: flex;
+    height: 100%;
+    
+    align-items: center;
+    perspective: 1000px;
+}
+
+.hp1card {
+    position: relative;
+    width: 30vw;
+    height: 65vh;
+    background-color: rgba(102, 255, 0, 0);
+    margin: 5vh;
+    margin-bottom: 15vh;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+}
+
+
+
+.cardFace {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Hides the back side when facing the other way */
+    
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: rgb(0, 0, 0);
+    border: 2px solid black;
+}
+
+.cardFront {
+    background-color: rgba(0, 238, 255, 0);
+    overflow: hidden;
+}
+
+.hp1card h1{
+    position: absolute;
+    color: black;
+    z-index: 3;
+    top: 20px;
+    color: #1c274c;
+
+}
+
+.cardFront img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    /* filter: blur(5px); */
+    z-index: 2;
+    
+
+}
+
+.top{
+    position: relative;
+    width: 100%;
+    height: 80%;
+    top: 0px;
+}
+
+.bottom {
+    position: relative;
+    width: 100%;
+    height: 20%;
+    bottom: 0px;
+    background-color: rgba(0, 255, 255, 0);
+    
+}
+
+.cardBack {
+    background-color: rgb(241, 195, 255);
+    transform: rotateY(180deg); /* Rotate the back side */
+    overflow: hidden;
+
+}
+
+.hp1card:hover {
+    transform: rotateY(180deg);
+}
+
+.hp1Info {
+    position: relative;
+    width: 30vw;
+    height: 65vh;
+    background-color: rgb(92, 92, 92);
+    margin: 5vh;
+    margin-bottom: 15vh;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+}
+
+
+.hpSecondPage{
+    overflow: hidden;
+    position: relative;
+    background-color: rgb(222, 184, 135);
+    width: 100%;
+    height: 100vh;
 }

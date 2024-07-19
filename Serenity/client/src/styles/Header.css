@@ -12,6 +12,8 @@
     background-color: rgb(255, 255, 255);
     margin: 0px;
     z-index: 100;
+  /* background-image: url('/src/assets/images/flowerBanner.jpg'); */
+    /* backdrop-filter: blur(5px) contrast(30%); */
     
     
 }
@@ -20,25 +22,74 @@
     position: absolute;
     display: flex;
     right: 50px;
-    top: 10%;
+    top: 1px;
     list-style: none;
     
-
 }
 
 .headerBody li{
     margin-left: 50px;
     list-style: none;
-    font-size: 30px;
+    font-size: 1.7vw;
     font-weight: 600;
 }
 
+
+
 .headerBody a{
+    transition: 3s;
     color: black;
     font-style: none;
     list-style: none;
     text-decoration: none;
     color: #1c274c;
+    display:inline-block;
 
 }
+
+.headerBody a:hover{
+    transition: 1s;
+    background: linear-gradient(to right, transparent, transparent),
+      linear-gradient(to right, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 100%;
+    animation-name: gradientAnimation;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+    filter: drop-shadow(10px 8px 4px #000000);
+    transform: rotateX(-5deg) rotateY(2deg) rotateZ(5deg) translateY(-5px);
+    display:inline-block;
+}
+
+@keyframes gradientAnimation {
+    0% {
+      background-position: left;
+    }
+    100% {
+      background-position: right;
+    }
+  }
+
+
+  .headerBody h3{
+    top: 5px;
+    font-size: 1.7vw;
+    margin: 0px;
+    
+    background: linear-gradient(
+        to right,
+        #bf953f,
+        #fcf6ba,
+        #b38728,
+        #fbf5b7,
+        #aa771c
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      cursor: pointer;
+    left: 10px;
+    overflow: hidden;
+  }
+
 
