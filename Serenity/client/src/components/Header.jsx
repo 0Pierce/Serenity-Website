@@ -13,14 +13,19 @@ export default function Header() {
     <>
     <div className="headerBody">
 
-      <h3>Serenity medi-clinic</h3>
-
-        <ul>
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/Contact">Contact</Link></li>
-          <li><Link to="/About">About</Link></li>
-          <li><Link to="/Prices">Prices</Link></li>
-        </ul>
+        <div className="headerLeft">
+            {/* <h3>Serenity medi-clinic</h3> */}
+        </div>
+      
+        <div className="headerRight">
+          <ul>
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="/Contact">Contact</Link></li>
+            <li><Link to="/About">About</Link></li>
+            <li><Link to="/Prices">Prices</Link></li>
+          </ul>
+        </div>
+        
     </div>
 
     </>

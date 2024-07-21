@@ -12,10 +12,26 @@
     background-color: rgb(255, 255, 255);
     margin: 0px;
     z-index: 100;
+    display: flex;
   /* background-image: url('/src/assets/images/flowerBanner.jpg'); */
     /* backdrop-filter: blur(5px) contrast(30%); */
     
     
+}
+
+.headerLeft{
+  position: relative;
+  height: 100%;
+  width: 65%;
+  background-color: #aa761c00;
+}
+
+
+.headerRight{
+  position: relative;
+  height: 100%;
+  width: 35%;
+  background-color: #ffffff;
 }
 
 .headerBody ul{
