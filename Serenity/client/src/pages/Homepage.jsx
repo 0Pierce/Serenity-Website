@@ -1,9 +1,21 @@
 import React from 'react';
 import Landing from '/src/components/Landing.jsx';
 import Header from '/src/components/Header.jsx';
-import "/src/styles/Homepage.css";
+import { useNavigate } from 'react-router-dom';import "/src/styles/Homepage.css";
 
 export default function Homepage() {
+
+
+  const navigate = useNavigate();
+  const btnBookNow = () =>{
+
+    console.log("click");
+    navigate("/Contact");
+
+  }
+
+
+
   return (
     <>
       <Landing />
@@ -49,8 +61,9 @@ export default function Homepage() {
             </div>
 
             <div className="hp1Info">
+            <h1>Sharplight Technology</h1>
               <div className="hp1InfoTop">
-                <h1>Sharplight Technology</h1>
+                
                 <p>The Rapid DPC provides a <span>safe and effective solution</span> for hair removal, acne, pigmented and vascular lesions, wrinkles, fine lines, and more.</p>
 
                 <p>With the Rapid DPC, you receive quick treatments that will not cut into your busy live. In most cases, <span>visible results can be seen after just a few sessions.</span></p>
@@ -58,7 +71,7 @@ export default function Homepage() {
 
               </div>
               <div className="hp1InfoBottom">
-              <div className="buttonBookNow"><h3>Book now!</h3></div>
+              <div className="buttonBookNow" onClick={btnBookNow}><h3>Book now!</h3></div>
 
               </div>
 
