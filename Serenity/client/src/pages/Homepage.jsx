@@ -1,7 +1,11 @@
-import React from 'react';
+import React,{useRef} from 'react';
 import Landing from '/src/components/Landing.jsx';
 import Header from '/src/components/Header.jsx';
+import Lottie, {} from 'lottie-react'
 import { useNavigate } from 'react-router-dom';import "/src/styles/Homepage.css";
+import animData from '/src/assets/svgs/FlowerSprout.json'
+import cloudsAnim from '/src/assets/svgs/CloudAnim.json'
+
 
 export default function Homepage() {
 
@@ -14,7 +18,7 @@ export default function Homepage() {
 
   }
 
-
+  const flowerRef = useRef(null)
 
   return (
     <>
@@ -81,7 +85,34 @@ export default function Homepage() {
 
 
         </div>
-        <div className="hpSecondPage"></div>
+        <div className="hpSecondPage">
+
+          <div className="hp2left">
+            <div className="hp2leftClouds">
+              <Lottie animationData={cloudsAnim}/>
+            </div>
+            <h3>Benefits</h3>
+          <div className="flowerAnim">
+              
+              <Lottie size={100} lottieRef={flowerRef}
+               animationData={animData}
+             
+
+               />
+          </div>
+          </div>
+          <div className="hp2right">
+            <div className="hp2rightTop">
+                top - Hair removal
+            </div>
+            <div className="hp2rightBottom">
+              bottom - Skin rej
+            </div>
+          </div>
+
+      
+
+        </div>
       </div>
     </>
   );
