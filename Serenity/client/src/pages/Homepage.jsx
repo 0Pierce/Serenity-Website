@@ -103,15 +103,22 @@ export default function Homepage() {
           </div>
           <div className="hp2right">
             <div className="hp2rightTop">
-                top - Hair removal
+              <h3>Hair removal</h3>
+                
             </div>
             <div className="hp2rightBottom">
-              bottom - Skin rej
+             
+              <h3>Skin Rejuvenation</h3>
+                
             </div>
           </div>
 
       
 
+        </div>
+
+        <div className="hpThirdPage">
+          
         </div>
       </div>
     </>
