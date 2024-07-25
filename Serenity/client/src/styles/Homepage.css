@@ -325,7 +325,7 @@
     width: 50%;
     height: 100%;
     overflow: hidden;
-    border-width: 0px 5px 0px 0px; 
+    border-width: 0.1rem 0.1rem 0px 0px; 
     border-style: solid;
     border-color: black;
 
@@ -335,6 +335,12 @@
     position: absolute;
     top: -15vh;
     z-index: 5;
+}
+
+.hp2LeftBirds{
+    position: absolute;
+    top: -5vh;
+    z-index: 4;
 }
 
 .hp2left h3{
@@ -353,7 +359,7 @@
     width: 50%;
     height: 100%;
     color: aliceblue;
-    border-width: 0px 0px 0px 5px; 
+    border-width: 0px 0px 0px 0.1rem; 
     border-style: solid;
     border-color: black;
 
@@ -413,7 +419,7 @@
     top: 0px;
     left: 0px;
     background-color: #30004500;
-    z-index: 1;
+    z-index: 0;
 }
 
 .hp2rightBottomBackground{
@@ -444,15 +450,44 @@
     position: relative;
     width: 15vw;
     height: 20vh;
-    background-color: rgba(255, 255, 255, 0.507);
+    background-color: rgb(255, 255, 255);
     margin-left: 10px;
     border-radius: 20px;
-    color:#1c274c;
+    color: #1c274c;
+    z-index: 2;
+    padding: 0.2vw;
+    transition: all 0.5s ease-in-out;
+    
 
 }
 
+
+.hp2Card:hover{
+    background: rgb(255,147,0,1);
+    width: 25vw;
+    height: 30vh;
+    box-shadow: 10px 10px 15px rgb(0, 0, 0);
+}
+
+.hp2Card:hover .hp2CardBottom p{
+    font-size: 1.3rem;
+
+}
+
+.hpCard2::before,
 .hp2Card::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 105%;
+    height: 105%;
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,147,0,1) 47%, rgba(255,229,0,1) 93%);
+    border-radius: inherit; 
     filter: blur(3.5rem);
+    z-index: 1;
+    
 }
 
 .hp2Card p{
@@ -461,24 +496,34 @@
     height: 100%;
     display: flex;
     justify-content: center;
-    font-size: 10px;
+    font-size: 1rem;
 }
 
 .hp2CardTop{
     position: relative;
     width: 100%;
-    height: 30%;
+    height: 20%;
     background-color: #8f96af00;
     display: flex;
     justify-content: center;
+    background-color: rgb(253, 253, 253);
+    z-index: 3;
+    border-radius: 20px 20px 0px 0px;
+    
 }
 
 .hp2CardBottom{
     position: relative;
+    background-color: rgb(255, 255, 255);
     width: 100%;
-    height: 70%;
+    height: 80%;
     display: flex;
     justify-content: center;
+    overflow: hidden;
+    z-index: 3;
+    border-radius: 0px 0px 20px 20px;
+    overflow-y: auto;
+
 }
 
 .hp2MoonContainer{

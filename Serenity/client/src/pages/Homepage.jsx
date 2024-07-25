@@ -1,4 +1,4 @@
-import React,{useRef} from 'react';
+import React,{useRef, useEffect} from 'react';
 import Landing from '/src/components/Landing.jsx';
 import Header from '/src/components/Header.jsx';
 import Lottie, {} from 'lottie-react'
@@ -8,6 +8,7 @@ import cloudsAnim from '/src/assets/svgs/CloudAnim.json'
 import moonAnim from '/src/assets/svgs/MoonAnim.json'
 import fallingStarsAnim from '/src/assets/svgs/FallingStarsAnim.json'
 import starsAnim from '/src/assets/svgs/StarsAnim.json'
+import birdsAnim from '/src/assets/svgs/BirdsAnim.json'
 
 export default function Homepage() {
 
@@ -21,6 +22,20 @@ export default function Homepage() {
   }
 
   const flowerRef = useRef(null)
+  const birdRef = useRef();
+  const meteorRef = useRef();
+
+  useEffect(() => {
+    if (birdRef.current) {
+      birdRef.current.setSpeed(0.3);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (meteorRef.current) {
+      meteorRef.current.setSpeed(0.2);
+    }
+  }, []);
 
   return (
     <>
@@ -93,6 +108,7 @@ export default function Homepage() {
             <div className="hp2leftClouds">
               <Lottie animationData={cloudsAnim}/>
             </div>
+            <div className="hp2LeftBirds"><Lottie animationData={birdsAnim} lottieRef={birdRef}/></div>
             <h3>Benefits</h3>
           <div className="flowerAnim">
               
@@ -125,7 +141,7 @@ export default function Homepage() {
 
               </div>
               <div className="hp2rightTopBackground">
-                <Lottie animationData={fallingStarsAnim}/>
+                <Lottie animationData={fallingStarsAnim} lottieRef={meteorRef}/>
                 <div className="hp2MoonContainer">
                 <Lottie animationData={moonAnim}/>
                 </div>
