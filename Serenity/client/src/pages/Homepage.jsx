@@ -70,7 +70,7 @@ export default function Homepage() {
             <h1>Sharplight Technology</h1>
               <div className="hp1InfoTop">
                 
-                <p>The Rapid DPC provides a <span>safe and effective solution</span> for hair removal, acne, pigmented and vascular lesions, wrinkles, fine lines, and more.</p>
+                <p>The Rapid DPC provides a <span>safe and effective solution</span> for hair removal, acne, pigmented vascular lesions, wrinkles, fine lines, and more.</p>
 
                 <p>With the Rapid DPC, you receive quick treatments that will not cut into your busy live. In most cases, <span>visible results can be seen after just a few sessions.</span></p>
 
@@ -107,9 +107,21 @@ export default function Homepage() {
             <div className="hp2rightTop">
               <h3>Hair removal</h3>
               <div className="hp2rightCards">
-                <div className="hp2Card"></div>
-                <div className="hp2Card"></div>
-                <div className="hp2Card"></div>
+                <div className="hp2Card">
+                  <div className="hp2CardTop"><h4>Title</h4></div>
+                  <div className="hp2CardBottom"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam rerum quas quia dignissimos laboriosam quisquam ea vel ad quae at est praesentium autem nihil hic iste obcaecati atque, dolorum fugiat.</p>
+                  </div>
+                  </div>
+                <div className="hp2Card">
+                <div className="hp2CardTop"><h4>Title</h4></div>
+                <div className="hp2CardBottom"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam rerum quas quia dignissimos laboriosam quisquam ea vel ad quae at est praesentium autem nihil hic iste obcaecati atque, dolorum fugiat.</p>
+                </div>
+                </div>
+                <div className="hp2Card">
+                <div className="hp2CardTop"><h4>Title</h4></div>
+                <div className="hp2CardBottom"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam rerum quas quia dignissimos laboriosam quisquam ea vel ad quae at est praesentium autem nihil hic iste obcaecati atque, dolorum fugiat.</p>
+                </div>
+                </div>
 
               </div>
               <div className="hp2rightTopBackground">
@@ -124,9 +136,21 @@ export default function Homepage() {
              
               <h3>Skin Rejuvenation</h3>
               <div className="hp2rightCards">
-                <div className="hp2Card"></div>
-                <div className="hp2Card"></div>
-                <div className="hp2Card"></div>
+              <div className="hp2Card">
+                  <div className="hp2CardTop"><h4>Title</h4></div>
+                  <div className="hp2CardBottom"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam rerum quas quia dignissimos laboriosam quisquam ea vel ad quae at est praesentium autem nihil hic iste obcaecati atque, dolorum fugiat.</p>
+                  </div>
+                  </div>
+                <div className="hp2Card">
+                <div className="hp2CardTop"><h4>Title</h4></div>
+                <div className="hp2CardBottom"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam rerum quas quia dignissimos laboriosam quisquam ea vel ad quae at est praesentium autem nihil hic iste obcaecati atque, dolorum fugiat.</p>
+                </div>
+                </div>
+                <div className="hp2Card">
+                <div className="hp2CardTop"><h4>Title</h4></div>
+                <div className="hp2CardBottom"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam rerum quas quia dignissimos laboriosam quisquam ea vel ad quae at est praesentium autem nihil hic iste obcaecati atque, dolorum fugiat.</p>
+                </div>
+                </div>
                 <div className="hp2rightBottomBackground">
                   <Lottie animationData={starsAnim}/>
                 </div>

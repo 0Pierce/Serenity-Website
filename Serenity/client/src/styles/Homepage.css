@@ -325,6 +325,10 @@
     width: 50%;
     height: 100%;
     overflow: hidden;
+    border-width: 0px 5px 0px 0px; 
+    border-style: solid;
+    border-color: black;
+
 }
 
 .hp2leftClouds{
@@ -349,7 +353,9 @@
     width: 50%;
     height: 100%;
     color: aliceblue;
-    
+    border-width: 0px 0px 0px 5px; 
+    border-style: solid;
+    border-color: black;
 
 }
 
@@ -366,6 +372,15 @@
     height: 50%;
     background-color: rgba(65, 247, 20, 0);
     
+
+}
+
+.hp2rightTop h3{
+    padding: 10vh;
+}
+
+.hp2rightBottom h3{
+    padding: 10vh;
 
 }
 
@@ -429,9 +444,41 @@
     position: relative;
     width: 15vw;
     height: 20vh;
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.507);
     margin-left: 10px;
     border-radius: 20px;
+    color:#1c274c;
+
+}
+
+.hp2Card::after{
+    filter: blur(3.5rem);
+}
+
+.hp2Card p{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 10px;
+}
+
+.hp2CardTop{
+    position: relative;
+    width: 100%;
+    height: 30%;
+    background-color: #8f96af00;
+    display: flex;
+    justify-content: center;
+}
+
+.hp2CardBottom{
+    position: relative;
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
 }
 
 .hp2MoonContainer{
