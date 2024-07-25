@@ -324,6 +324,7 @@
     background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(226,255,245,1) 42%, rgba(226,255,245,1) 100%);
     width: 50%;
     height: 100%;
+    overflow: hidden;
 }
 
 .hp2leftClouds{
@@ -344,9 +345,11 @@
 
 .hp2right{
     position: relative;
-    background-color: rgba(127, 127, 255, 0) ;
+    background: linear-gradient(45deg, #070070, #300045);
     width: 50%;
     height: 100%;
+    color: aliceblue;
+    
 
 }
 
@@ -361,7 +364,9 @@
     position: relative;
     width: 100%;
     height: 50%;
-    background-color: rgba(245, 245, 220, 0);
+    background-color: rgba(65, 247, 20, 0);
+    
+
 }
 
 .hp2rightBottom{
@@ -369,6 +374,11 @@
     width: 100%;
     height: 50%;
     background-color: rgba(144, 135, 222, 0);
+    
+}
+
+.hp2rightBottom h3{
+    margin-top: 0px;
 }
 
 .flowerAnim{
@@ -381,12 +391,63 @@
     
 }
 
+.hp2rightTopBackground{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background-color: #30004500;
+    z-index: 1;
+}
+
+.hp2rightBottomBackground{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 5vh;
+    left: 0px;
+    background-color: #30004500;
+    z-index: 1;
+}
+
+.hp2rightCards{
+    position: absolute;
+    display: flex;
+    background-color: rgba(0, 255, 255, 0);
+    width: 100%;
+    height: 100%;
+    bottom: 10px;
+    margin-bottom: 10px;
+    z-index: 2;
+    justify-content: center;
+    align-items: end;
+    
+}
+
+.hp2Card{
+    position: relative;
+    width: 15vw;
+    height: 20vh;
+    background-color: rgb(255, 255, 255);
+    margin-left: 10px;
+    border-radius: 20px;
+}
+
+.hp2MoonContainer{
+    position: absolute;
+    height: 15vh;
+    width: 15vw;
+    right: 0px;
+    top: 0px;
+}
+
 
 .hpThirdPage{
     position: relative;
     width: 100%;
     height: 100vh;
-    background-color: beige;
+    background-color: rgb(247, 247, 29);
 }
 
 

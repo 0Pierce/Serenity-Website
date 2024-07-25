@@ -5,7 +5,9 @@ import Lottie, {} from 'lottie-react'
 import { useNavigate } from 'react-router-dom';import "/src/styles/Homepage.css";
 import animData from '/src/assets/svgs/FlowerSprout.json'
 import cloudsAnim from '/src/assets/svgs/CloudAnim.json'
-
+import moonAnim from '/src/assets/svgs/MoonAnim.json'
+import fallingStarsAnim from '/src/assets/svgs/FallingStarsAnim.json'
+import starsAnim from '/src/assets/svgs/StarsAnim.json'
 
 export default function Homepage() {
 
@@ -94,7 +96,7 @@ export default function Homepage() {
             <h3>Benefits</h3>
           <div className="flowerAnim">
               
-              <Lottie size={100} lottieRef={flowerRef}
+              <Lottie lottieRef={flowerRef}
                animationData={animData}
              
 
@@ -104,11 +106,31 @@ export default function Homepage() {
           <div className="hp2right">
             <div className="hp2rightTop">
               <h3>Hair removal</h3>
+              <div className="hp2rightCards">
+                <div className="hp2Card"></div>
+                <div className="hp2Card"></div>
+                <div className="hp2Card"></div>
+
+              </div>
+              <div className="hp2rightTopBackground">
+                <Lottie animationData={fallingStarsAnim}/>
+                <div className="hp2MoonContainer">
+                <Lottie animationData={moonAnim}/>
+                </div>
+              </div>
                 
             </div>
             <div className="hp2rightBottom">
              
               <h3>Skin Rejuvenation</h3>
+              <div className="hp2rightCards">
+                <div className="hp2Card"></div>
+                <div className="hp2Card"></div>
+                <div className="hp2Card"></div>
+                <div className="hp2rightBottomBackground">
+                  <Lottie animationData={starsAnim}/>
+                </div>
+              </div>
                 
             </div>
           </div>
