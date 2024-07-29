@@ -180,7 +180,20 @@ export default function Homepage() {
         </div>
 
         <div className="hpThirdPage">
-          
+          <div className="hp3Top">
+            <div className="hp3LeftTop">Undecided</div>
+            <div className="hp3RightTop">Title + Image</div>
+          </div>
+          <div className="hp3Bottom">
+            <div className="hp3LeftBottom">HR carosel</div>
+            <div className="hp3RightBottom">SR Carosel</div>
+          </div>
+      
+        </div>
+
+
+        <div className="hpFourthPage">
+
         </div>
       </div>
     </>

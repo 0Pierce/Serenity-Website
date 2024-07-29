@@ -322,10 +322,10 @@
 .hp2left{
     position: relative;
     background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(226,255,245,1) 42%, rgba(226,255,245,1) 100%);
-    width: 50%;
+    width: 40%;
     height: 100%;
     overflow: hidden;
-    border-width: 0.1rem 0.1rem 0px 0px; 
+    border-width: 0rem 0.1rem 0px 0px; 
     border-style: solid;
     border-color: black;
 
@@ -346,7 +346,7 @@
 .hp2left h3{
     position: relative;
     top: 5vh;
-    font-size: 10vw;
+    font-size: 9vw;
     z-index: 4;
     display: flex;
     justify-items: center;
@@ -359,7 +359,7 @@
 .hp2right{
     position: relative;
     background: linear-gradient(45deg, #070070, #300045);
-    width: 50%;
+    width: 60%;
     height: 100%;
     color: aliceblue;
     border-width: 0px 0px 0px 0.1rem; 
@@ -450,10 +450,10 @@
 
 .hp2Card{
     position: relative;
-    width: 15vw;
-    height: 20vh;
-    background-color: rgba(255, 255, 255, 0.25);
-    margin-left: 10px;
+    width: 20vw;
+    height: 25vh;
+    background-color: rgba(255, 255, 255, 0.6);
+    margin: 5px;
     border-radius: 20px;
     color: #1c274c;
     z-index: 2;
@@ -468,8 +468,8 @@
 
 
 .hp2Card:hover{
-    background: rgba(223, 223, 223, 0.9);
-    width: 100%;
+    background: rgba(223, 223, 223, 1);
+    width: 50%;
     height: 25vh;
     box-shadow: 10px 10px 15px rgb(0, 0, 0);
     
@@ -532,11 +532,11 @@
     height: 20%;
     display: flex;
     justify-content: center;
+    
     background-color: rgba(255, 255, 255, 0.6);
     z-index: 3;
     border-radius: 20px 20px 0px 0px;
-
-    font-size: 1vw;
+    font-size: 1.3vw;
     color: rgb(0, 0, 0);
     
 }
@@ -580,8 +580,66 @@
     width: 100%;
     height: 100vh;
     background-color: rgb(255, 255, 255);
+    
+
 }
 
+.hp3Top{
+    position: relative;
+    width: 100%;
+    height: 35%;
+    background-color: #ff0000;
+    display: flex;
+}
+
+.hp3LeftTop{
+    position: relative;
+    width: 40%;
+    height: 100%;
+    background-color: #798cca;
+}
+
+.hp3RightTop{
+    position: relative;
+    width: 60%;
+    height: 100%;
+    background-color: #10ff60;
+}
+
+
+
+.hp3Bottom{
+    position: relative;
+    width: 100%;
+    height: 75%;
+    background-color: bisque;
+    display: flex;
+}
+
+.hp3LeftBottom{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    background-color: aqua;
+
+}
+
+.hp3RightBottom{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    background-color: brown;
+}
+
+
+
+
+
+.hpFourthPage{
+    width: 100%;
+    height: 100vh;
+    background-color: #300045;
+}
 
 
 
