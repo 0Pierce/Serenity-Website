@@ -125,8 +125,8 @@ export default function Homepage() {
               <div className="hp2rightCards">
                 <div className="hp2Card">
                   <div className="hp2CardTop"><h4>Title</h4></div>
-                  <div className="hp2CardBottom"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam rerum quas quia dignissimos laboriosam quisquam ea vel ad quae at est praesentium autem nihil hic iste obcaecati atque, dolorum fugiat.</p>
-                  </div>
+                  
+                  <div className="hp2CardBottom"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam rerum quas quia dignissimos laboriosam quisquam ea vel ad quae at est praesentium autem nihil hic iste obcaecati atque, dolorum fugiat.</p></div>
                   </div>
                 <div className="hp2Card">
                 <div className="hp2CardTop"><h4>Title</h4></div>
@@ -153,18 +153,18 @@ export default function Homepage() {
               <h3>Skin Rejuvenation</h3>
               <div className="hp2rightCards">
               <div className="hp2Card">
-                  <div className="hp2CardTop"><h4>Title</h4></div>
-                  <div className="hp2CardBottom"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam rerum quas quia dignissimos laboriosam quisquam ea vel ad quae at est praesentium autem nihil hic iste obcaecati atque, dolorum fugiat.</p>
+                  <div className="hp2CardTop"><h4>Restores Youth</h4></div>
+                  <div className="hp2CardBottom"><p>It takes years off your age in terms of appearance by regenating the collagen in your skin. Thanks to the increase in collagen it also delays the ageing process and returns the radiant glow of your youth.</p>
                   </div>
                   </div>
                 <div className="hp2Card">
-                <div className="hp2CardTop"><h4>Title</h4></div>
-                <div className="hp2CardBottom"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam rerum quas quia dignissimos laboriosam quisquam ea vel ad quae at est praesentium autem nihil hic iste obcaecati atque, dolorum fugiat.</p>
+                <div className="hp2CardTop"><h4>Treats wrinkes & more</h4></div>
+                <div className="hp2CardBottom"><p>Reduce fine lines, wrinkles, sun damage, pigmentation, melasma, open pores, freckles, uneven skin tone and enhance eleasticity. Results are visible just after a couple treatments and may last for years.</p>
                 </div>
                 </div>
                 <div className="hp2Card">
-                <div className="hp2CardTop"><h4>Title</h4></div>
-                <div className="hp2CardBottom"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam rerum quas quia dignissimos laboriosam quisquam ea vel ad quae at est praesentium autem nihil hic iste obcaecati atque, dolorum fugiat.</p>
+                <div className="hp2CardTop"><h4>IPL Therapy</h4></div>
+                <div className="hp2CardBottom"><p>IPL technology is non-invasive and painless. </p>
                 </div>
                 </div>
                 <div className="hp2rightBottomBackground">
