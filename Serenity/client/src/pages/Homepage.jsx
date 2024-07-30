@@ -182,7 +182,7 @@ export default function Homepage() {
         <div className="hpThirdPage">
           <div className="hp3Top">
             <div className="hp3LeftTop">Undecided</div>
-            <div className="hp3RightTop">Title + Image</div>
+            <div className="hp3RightTop"><h1>See the results</h1></div>
           </div>
           <div className="hp3Bottom">
             <div className="hp3LeftBottom">HR carosel</div>
@@ -193,7 +193,7 @@ export default function Homepage() {
 
 
         <div className="hpFourthPage">
-
+          Placeholder 
         </div>
       </div>
     </>
