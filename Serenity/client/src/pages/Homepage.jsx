@@ -2,13 +2,22 @@ import React,{useRef, useEffect} from 'react';
 import Landing from '/src/components/Landing.jsx';
 import Header from '/src/components/Header.jsx';
 import Lottie, {} from 'lottie-react'
-import { useNavigate } from 'react-router-dom';import "/src/styles/Homepage.css";
+import { useNavigate } from 'react-router-dom';
+import { Parallax, ParallaxLayer } from '@react-spring/parallax';
+import "/src/styles/Homepage.css";
 import animData from '/src/assets/svgs/FlowerSprout.json'
 import cloudsAnim from '/src/assets/svgs/CloudAnim.json'
 import moonAnim from '/src/assets/svgs/MoonAnim.json'
 import fallingStarsAnim from '/src/assets/svgs/FallingStarsAnim.json'
 import starsAnim from '/src/assets/svgs/StarsAnim.json'
 import birdsAnim from '/src/assets/svgs/BirdsAnim.json'
+
+
+import img1 from "/src/assets/images/img3.jpg"
+import img2 from "/src/assets/images/img3.jpg"
+import img3 from "/src/assets/images/img3.jpg"
+import Carousel from 'react-bootstrap/Carousel';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function Homepage() {
 
@@ -25,17 +34,24 @@ export default function Homepage() {
   const birdRef = useRef();
   const meteorRef = useRef();
 
+  
+
   useEffect(() => {
     if (birdRef.current) {
       birdRef.current.setSpeed(0.3);
     }
-  }, []);
 
-  useEffect(() => {
     if (meteorRef.current) {
       meteorRef.current.setSpeed(0.2);
     }
+
+    if(flowerRef.current){
+      
+    }
+
   }, []);
+
+
 
   return (
     <>
@@ -102,6 +118,10 @@ export default function Homepage() {
 
 
         </div>
+
+
+     
+
         <div className="hpSecondPage">
 
           <div className="hp2left">
@@ -124,7 +144,7 @@ export default function Homepage() {
               <h3>Hair removal</h3>
               <div className="hp2rightCards">
                 <div className="hp2Card">
-                  <div className="hp2CardTop"><h4>Title</h4></div>
+                  <div className="hp2CardTop"><h4>Long term solution</h4></div>
                   
                   <div className="hp2CardBottom"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam rerum quas quia dignissimos laboriosam quisquam ea vel ad quae at est praesentium autem nihil hic iste obcaecati atque, dolorum fugiat.</p></div>
                   </div>
@@ -164,7 +184,7 @@ export default function Homepage() {
                 </div>
                 <div className="hp2Card">
                 <div className="hp2CardTop"><h4>IPL Therapy</h4></div>
-                <div className="hp2CardBottom"><p>IPL technology is non-invasive and painless. </p>
+                <div className="hp2CardBottom"><p>IPL technology is non-invasive and painless. It uses many wavelengths to fix unwanted skin pigment conditions or vein changes. The light waves pass through the top layer of skin (epidermis) to the targeted lesion, either pigmented or vascular. In IPL treatment for pigment issues: The light heats the pigment cells and destroys them. </p>
                 </div>
                 </div>
                 <div className="hp2rightBottomBackground">
@@ -181,12 +201,54 @@ export default function Homepage() {
 
         <div className="hpThirdPage">
           <div className="hp3Top">
-            <div className="hp3LeftTop">Undecided</div>
-            <div className="hp3RightTop"><h1>See the results</h1></div>
+            <div className="hp3LeftTop"></div>
+            <div className="hp3RightTop">
+              <div className="hp3Spacer"></div>
+              <h1>See the results</h1>
+              <img src="/src/assets/images/img6.jpg" alt="Banner Image" />
+              
+              </div>
           </div>
           <div className="hp3Bottom">
-            <div className="hp3LeftBottom">HR carosel</div>
-            <div className="hp3RightBottom">SR Carosel</div>
+            <div className="hp3LeftBottom">
+
+              <div className="hp3Carousel">
+
+              <Carousel interval={6000}>
+                    <Carousel.Item>
+                      <img src="/src/assets/images/img4.jpg" alt="" />
+                      
+                   </Carousel.Item>
+
+                   <Carousel.Item>
+                      <img src="/src/assets/images/img4.jpg" alt="" />
+                      
+                   </Carousel.Item>
+
+                </Carousel>
+
+              </div>
+
+
+            </div>
+            <div className="hp3RightBottom">
+            <div className="hp3Carousel">
+
+                <Carousel interval={6000}>
+                      <Carousel.Item>
+                        <img src="/src/assets/images/img4.jpg" alt="" />
+                        
+                    </Carousel.Item>
+
+                    <Carousel.Item>
+                        <img src="/src/assets/images/img4.jpg" alt="" />
+                        
+                    </Carousel.Item>
+
+                  </Carousel>
+
+</div>
+            </div>
           </div>
       
         </div>

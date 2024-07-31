@@ -1,13 +1,15 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: "Rubik", sans-serif;
+
 }
 
 .homepageBody {
     position: relative;
     width: 100%;
     height: 100%;
-    background-color: rgb(255, 0, 0);
+    background-color: rgb(255, 255, 255);
     display: inline-block;
     margin: 0px;
 }
@@ -317,6 +319,8 @@
     height: 100vh;
     color: #1c274c;
     display: flex;
+    margin-top: 10vh;
+
 }
 
 .hp2left{
@@ -404,13 +408,17 @@
     margin-top: 0px;
 }
 
+
+/* TODO: FIX SCALING */
 .flowerAnim{
     position: relative;
     background-color: rgba(0, 255, 255, 0);
     transform: rotate(50deg);
-    width: 50vw; 
-    height: 80vh; 
+    width: 100%;
+    height: 60%;
     left: -3vw;
+    top: -8vh;
+  
     
 }
 
@@ -580,6 +588,7 @@
     width: 100%;
     height: 100vh;
     background-color: rgb(255, 255, 255);
+   
     
 
 }
@@ -587,7 +596,7 @@
 .hp3Top{
     position: relative;
     width: 100%;
-    height: 35%;
+    height: 40%;
     background-color: #ff0000;
     display: flex;
 }
@@ -596,14 +605,73 @@
     position: relative;
     width: 40%;
     height: 100%;
-    background-color: #798cca;
+    background: linear-gradient(180deg, rgba(226,255,245,1) 0%, rgba(226,255,245,1) 42%, rgba(225,255,255,1) 100%);
+    border-width: 0rem 0.1rem 0px 0px; 
+    border-style: solid;
+    border-color: black;
+
+
 }
 
 .hp3RightTop{
     position: relative;
     width: 60%;
     height: 100%;
-    background-color: #10ff60;
+    background-color: #000000;
+ 
+    
+    border-width: 0px 0px 0px 0.1rem; 
+    border-style: solid;
+    border-color: black;
+    overflow: hidden;
+
+    
+}
+
+.hp3Spacer{
+    position: relative;
+    width: 100%;
+    height: 20%;
+    background-color: #070070;
+    z-index: 6;
+}
+
+.hp3RightTop h1{
+    position: relative;
+    z-index: 3;
+    font-size: 7vw;
+    color: #1c274c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 10%;
+
+
+}
+
+.hp3RightTop img{
+    position: absolute;
+    top: 0px;
+    left: -1vw;
+    width: 105%;
+    height: 105%;
+    object-fit: cover;
+    z-index: 1;
+    filter: blur(4px);
+    overflow: hidden;
+    
+
+}
+
+.hp3RightTop::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-color: rgba(255, 255, 255, 0.4); /* Adjust opacity as needed */
 }
 
 
@@ -611,8 +679,8 @@
 .hp3Bottom{
     position: relative;
     width: 100%;
-    height: 75%;
-    background-color: bisque;
+    height: 60%;
+    background-color: rgba(255, 228, 196, 0);
     display: flex;
 }
 
@@ -620,19 +688,45 @@
     position: relative;
     width: 50%;
     height: 100%;
-    background-color: aqua;
+    background-color: rgb(0, 255, 255);
+    
 
 }
+
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1) sepia(1) saturate(5) hue-rotate(180deg);
+  width: 100px;
+  height: 100px;
+}
+
 
 .hp3RightBottom{
     position: relative;
     width: 50%;
     height: 100%;
-    background-color: brown;
+    background-color: rgb(165, 42, 42);
 }
 
 
 
+.hp3Carousel{
+    position: relative;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    background-color: #070070;
+}
+
+.hp3Bottom img{
+    position: relative;
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover ;
+    z-index: 1;
+      
+}
 
 
 .hpFourthPage{
