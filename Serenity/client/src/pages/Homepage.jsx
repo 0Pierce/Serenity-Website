@@ -211,43 +211,47 @@ export default function Homepage() {
           </div>
           <div className="hp3Bottom">
             <div className="hp3LeftBottom">
+              <div className="hp3CarContainer">
+                  <div className="hp3Carousel">
 
-              <div className="hp3Carousel">
+                  <Carousel interval={6000}>
+                        <Carousel.Item>
+                          <img src="/src/assets/images/img4.jpg" alt="" />
+                          
+                      </Carousel.Item>
 
-              <Carousel interval={6000}>
-                    <Carousel.Item>
-                      <img src="/src/assets/images/img4.jpg" alt="" />
-                      
-                   </Carousel.Item>
+                      <Carousel.Item>
+                          <img src="/src/assets/images/img6.jpg" alt="" />
+                          
+                      </Carousel.Item>
 
-                   <Carousel.Item>
-                      <img src="/src/assets/images/img4.jpg" alt="" />
-                      
-                   </Carousel.Item>
+                    </Carousel>
 
-                </Carousel>
-
-              </div>
-
+                  </div>
+                </div>
 
             </div>
             <div className="hp3RightBottom">
-            <div className="hp3Carousel">
+              <h2>Test</h2>
+              <div className="hp3CarContainer">
+                    <div className="hp3Carousel">
 
-                <Carousel interval={6000}>
-                      <Carousel.Item>
-                        <img src="/src/assets/images/img4.jpg" alt="" />
-                        
-                    </Carousel.Item>
+                    <Carousel interval={6000}>
+                          <Carousel.Item>
+                            <img src="/src/assets/images/img4.jpg" alt="" />
+                            
+                        </Carousel.Item>
 
-                    <Carousel.Item>
-                        <img src="/src/assets/images/img4.jpg" alt="" />
-                        
-                    </Carousel.Item>
+                        <Carousel.Item>
+                            <img src="/src/assets/images/img6.jpg" alt="" />
+                            
+                        </Carousel.Item>
 
-                  </Carousel>
+                      </Carousel>
 
-</div>
+                    </div>
+                  </div>
+
             </div>
           </div>
       
