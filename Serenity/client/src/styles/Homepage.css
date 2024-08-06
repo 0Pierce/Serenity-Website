@@ -645,6 +645,7 @@
     justify-content: center;
     align-items: center;
     top: 10%;
+    font-weight: 300;
 
 
 }
@@ -682,6 +683,8 @@
     height: 60%;
     background-color: rgba(255, 228, 196, 0);
     display: flex;
+    align-items: center;
+    justify-items: center;
 }
 
 .hp3LeftBottom{
@@ -701,7 +704,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
+    background-color: rgba(0, 255, 255, 0);
+    
 }
 
 
@@ -717,7 +721,7 @@
     position: relative;
     width: 50%;
     height: 100%;
-    background-color: rgb(165, 42, 42);
+    background-color: rgba(165, 42, 42, 0);
 
 }
 
@@ -729,7 +733,7 @@
     
     max-height: 90%;
     overflow: hidden;
-    background-color: #070070;
+    background-color: #1a0dd800;
 }
 
 
@@ -742,6 +746,17 @@
     z-index: 1;
     overflow: hidden;
       
+}
+
+.hp3Bottom h2{
+    position: relative;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    color: #1c274c;
+    background-color: #30004500;
+    margin: 0px;
+    margin-bottom: 1vh;
 }
 
 

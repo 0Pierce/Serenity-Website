@@ -213,6 +213,7 @@ export default function Homepage() {
             <div className="hp3LeftBottom">
               <div className="hp3CarContainer">
                   <div className="hp3Carousel">
+                  <h2>Hair Removal</h2>
 
                   <Carousel interval={6000}>
                         <Carousel.Item>
@@ -232,9 +233,9 @@ export default function Homepage() {
 
             </div>
             <div className="hp3RightBottom">
-              <h2>Test</h2>
               <div className="hp3CarContainer">
                     <div className="hp3Carousel">
+                    <h2>Skin Rejuvenation</h2>
 
                     <Carousel interval={6000}>
                           <Carousel.Item>
@@ -253,6 +254,7 @@ export default function Homepage() {
                   </div>
 
             </div>
+            
           </div>
       
         </div>
