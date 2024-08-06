@@ -205,7 +205,9 @@ export default function Homepage() {
             <div className="hp3LeftTop"></div>
             <div className="hp3RightTop">
               <div className="hp3Spacer"></div>
-              <h1>See the results</h1>
+                <div className="hp3RTContainer">
+                  <h1>See the results</h1>
+                </div>
               <img src="/src/assets/images/img6.jpg" alt="Banner Image" />
               
               </div>

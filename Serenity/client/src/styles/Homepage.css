@@ -597,7 +597,7 @@
     position: relative;
     width: 100%;
     height: 40%;
-    background-color: #ff0000;
+    background-color: #0051ff00;
     display: flex;
 }
 
@@ -617,14 +617,14 @@
     position: relative;
     width: 60%;
     height: 100%;
-    background-color: #000000;
+    background-color: #ff0000;
  
     
     border-width: 0px 0px 0px 0.1rem; 
     border-style: solid;
     border-color: black;
     overflow: hidden;
-
+    
     
 }
 
@@ -634,6 +634,20 @@
     height: 20%;
     background-color: #070070;
     z-index: 6;
+    margin: 0px;
+
+}
+
+.hp3RTContainer{
+    position: relative;
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 255, 255, 0);
+    z-index: 50;
+    margin: 0px;
 }
 
 .hp3RightTop h1{
@@ -641,10 +655,7 @@
     z-index: 3;
     font-size: 7vw;
     color: #1c274c;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    top: 10%;
+    margin: 0px;
     font-weight: 300;
 
 
@@ -760,11 +771,7 @@
 }
 
 
-.hpFourthPage{
-    width: 100%;
-    height: 100vh;
-    background-color: #ffffff;
-}
+
 
 
 
