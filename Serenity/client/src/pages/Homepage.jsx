@@ -1,6 +1,7 @@
 import React,{useRef, useEffect} from 'react';
 import Landing from '/src/components/Landing.jsx';
 import Header from '/src/components/Header.jsx';
+import Footer from '/src/components/Footer.jsx'
 import Lottie, {} from 'lottie-react'
 import { useNavigate } from 'react-router-dom';
 import { Parallax, ParallaxLayer } from '@react-spring/parallax';
@@ -258,12 +259,14 @@ export default function Homepage() {
           </div>
       
         </div>
+        <button></button>
 
-
-        <div className="hpFourthPage">
+        {/* <div className="hpFourthPage">
           Placeholder 
-        </div>
+        </div> */}
       </div>
+
+      <Footer/>
     </>
   );
 }
